@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { motion } from 'framer-motion';
 import { Send, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactForm() {
@@ -48,27 +47,15 @@ export default function ContactForm() {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-400/5 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <span className="inline-block text-emerald-400 font-semibold text-sm tracking-wider uppercase mb-4">Get Started Today</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.2] text-white mb-6">Transform Your Workplace Culture</h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Schedule a personalized demo and discover how CultureIQ Analytics can unlock your team's full potential.</p>
-        </motion.div>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Schedule a personalized demo and discover how CultureIQ Analytics can unlock your team&apos;s full potential.</p>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Contact Info Side */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <div>
               <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-[1.3] text-white mb-4">Why Leading Companies Choose Us</h3>
               <p className="text-slate-400">Join 500+ enterprise teams using CultureIQ Analytics to build data-driven, high-performance cultures.</p>
@@ -109,16 +96,10 @@ export default function ContactForm() {
             <div className="pt-6 border-t border-slate-800">
               <p className="text-slate-500 text-sm">Trusted by HR leaders at Fortune 500 companies worldwide.</p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Form Side */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative"
-          >
+          <div className="relative">
             {status === 'success' ? (
               <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 text-center">
                 <div className="w-16 h-16 bg-emerald-400/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -174,9 +155,9 @@ export default function ContactForm() {
                 )}
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
-  </div></div>);
+  );
 }
