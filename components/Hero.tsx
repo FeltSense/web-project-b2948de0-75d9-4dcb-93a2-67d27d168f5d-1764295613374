@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { TrendingUp, Users, BarChart3, Zap } from 'lucide-react';
 
 export default function Hero() {
@@ -16,12 +14,7 @@ export default function Hero() {
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
-          >
+          <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-violet-600/10 border border-violet-500/20 rounded-full px-4 py-2 mb-8">
               <Zap className="w-4 h-4 text-emerald-400" />
               <span className="text-violet-300 text-sm font-medium">AI-Powered People Analytics</span>
@@ -68,15 +61,10 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
           
           {/* Dashboard Preview */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="relative bg-slate-900 rounded-2xl border border-slate-800 shadow-2xl overflow-hidden">
               {/* Dashboard Header */}
               <div className="bg-slate-800/50 px-6 py-4 border-b border-slate-700 flex items-center gap-3">
@@ -145,16 +133,14 @@ export default function Hero() {
                     <div>
                       <p className="text-white font-medium text-sm">AI Insight</p>
                       <p className="text-slate-400 text-xs mt-1">Engineering team shows 23% higher engagement after flexible work policy. Consider expanding to other departments.</p>
-                    </div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             
             {/* Floating Elements */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border border-slate-100"
-            >
+            <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border border-slate-100">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
                   <TrendingUp className="w-5 h-5 text-emerald-600" />
@@ -164,14 +150,9 @@ export default function Hero() {
                   <p className="text-emerald-600 text-xs font-medium">Down 34%</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl p-4 border border-slate-100"
-            >
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl p-4 border border-slate-100">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-violet-100 rounded-full flex items-center justify-center">
                   <Users className="w-5 h-5 text-violet-600" />
@@ -181,10 +162,10 @@ export default function Hero() {
                   <p className="text-violet-600 text-xs font-medium">92% Positive</p>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  </div></div></div></div></div></div></div></div></div></div></div></div>);
+  );
 }
