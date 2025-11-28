@@ -142,7 +142,10 @@ export default function Footer() {
               <Link href="#" className="text-slate-500 hover:text-slate-300 transition-colors duration-300">
                 Cookie Settings
               </Link>
-            </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-  </div></div>);
+  );
 }
